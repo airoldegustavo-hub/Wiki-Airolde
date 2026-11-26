@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">Airolde Wiki</div>
+
+    <nav>
+        <a href="#" onclick="inicio()">Início</a>
+        <a href="#categoria">Categoria</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+
+    <input
+        type="search"
+        id="pesquisa"
+        placeholder="Pesquisar artigos..."
+        oninput="pesquisar()"
+    >
+</header>
+
+<div class="banner">
+    <div class="banner-perfil">
+        <img
+            src="imagens/perfil.png"
+            alt="Foto de Gustavo Airolde"
+            class="foto-perfil"
+        >
+        <div class="banner-text">
+            <h1>Gustavo Airolde</h1>
+            <p>Explore o nosso universo de informações</p>
+        </div>
+    </div>
+</div>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h3>NAVEGAÇÃO</h3>
+        <a href="#" onclick="inicio()">Página inicial</a>
+        <a href="#categoria">Artigos</a>
+        <a href="#sobre">Sobre a Wiki</a>
+    </aside>
+
+    <main class="conteudo-principal lobby-ativo">
+
+        <section id="inicio">
+            <h1>Bem-vindo à Wiki</h1>
+            <p>
+                Bem-vindo à nossa enciclopédia!
+                Aqui vais encontrar informações,
+                curiosidades e diversos artigos.
+            </p>
+        </section>
+
+        <section id="categoria">
+            <h1>Categoria principal</h1>
+            <div class="artigos" id="listaArtigos"></div>
+        </section>
+
+        <section id="sobre">
+            <h1>Sobre</h1>
+            <p>Informações sobre o Airolde</p>
+            <p>Idade: 17</p>
+            <p>Data de nascimento: 20/02/2009</p>
+            <p>Altura: 1,83</p>
+            <p>Peso: 54,90.</p>
+        </section>
+
+        <section id="paginaArtigo" hidden>
+            <button type="button" onclick="voltar()">← Voltar</button>
+            <div id="conteudoArtigo"></div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
